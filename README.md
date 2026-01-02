@@ -1,282 +1,108 @@
-# Personal Portfolio Website Template
+# Hello! I'm Samarth Saxena 👋 
 
-A modern, customizable personal portfolio website built with Next.js, TypeScript, and Tailwind CSS. Features dark theme and easy deployment to Vercel.
-
-## 🚀 Quick Start
-
-### Prerequisites
-
-- Node.js 18+ installed
-- npm or yarn package manager
-- Git
-
-### Installation
-
-1. **Clone or download this repository**
-   ```bash
-   git clone <your-repo-url>
-   cd portfolio-website
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Run the development server**
-   ```bash
-   npm run dev
-   ```
-
-4. **Open [http://localhost:3000](http://localhost:3000)** in your browser
-
-## ⚙️ Configuration
-
-All personal information is configured through files in the `/config` folder. **No code changes required** - just update these config files with your information!
-
-### Configuration Files
-
-| File | Purpose |
-|------|---------|
-| `config/site.config.ts` | Site metadata, SEO, Google Analytics |
-| `config/profile.config.ts` | Your name, social links, profile image |
-| `config/experience.config.ts` | Education and work experience |
-| `config/projects.config.ts` | Your projects list |
-| `config/blogs.config.ts` | Blog posts configuration |
-
-### Step-by-Step Customization
-
-#### 1. Site Configuration (`config/site.config.ts`)
-
-```typescript
-export const siteConfig = {
-  metadata: {
-    title: "Your Name - Portfolio",           // Browser tab title
-    description: "Your portfolio description", // SEO description
-    author: "Your Name",
-    siteUrl: "https://yoursite.com",          // Your deployed URL
-    twitterHandle: "@yourusername",           // For Twitter cards
-  },
-  googleAnalyticsId: "G-XXXXXXXXXX",          // Optional: your GA ID
-  features: {
-    blogs: true,             // Show blog section
-    neighborLinks: false,    // Show friend website links
-  },
-};
-```
-
-#### 2. Profile Configuration (`config/profile.config.ts`)
-
-```typescript
-export const profileConfig = {
-  name: {
-    full: "Your Full Name",
-    short: "yourname",      // Displayed in hero section
-    extraChars: "",         // Typing animation (e.g., "athan" for "john" → "johnathan")
-  },
-  greeting: {
-    en: "hi im",
-  },
-  social: {
-    email: "your@email.com",
-    linkedin: "https://linkedin.com/in/yourprofile",
-    github: "https://github.com/yourusername",
-    twitter: "https://x.com/yourusername",
-  },
-  profileImage: "/your-profile.png",  // Place in /public folder
-};
-```
-
-#### 3. Experience Configuration (`config/experience.config.ts`)
-
-Add your education and work experience:
-
-```typescript
-export const experienceConfig = {
-  current: {
-    title: { en: "Currently" },
-    items: [
-      {
-        name: "Your University",
-        role: { en: "Computer Science" },
-        subtitle: { en: "University Name" },
-        url: "https://university.edu",
-        logo: "/university-logo.png",  // Place in /public folder
-      },
-    ],
-  },
-  previous: {
-    title: { en: "Previously" },
-    items: [
-      {
-        name: "Company Name",
-        role: { en: "Software Engineer Intern" },
-        subtitle: { en: "Company Name" },
-        url: "https://company.com",
-        logo: "/company-logo.png",
-      },
-    ],
-  },
-};
-```
-
-#### 4. Projects Configuration (`config/projects.config.ts`)
-
-```typescript
-export const projectsConfig = {
-  title: { en: "Projects" },
-  items: [
-    {
-      name: { en: "Project Name" },
-      url: "https://github.com/yourusername/project",
-      description: { en: "Brief description" },
-    },
-  ],
-};
-```
-
-#### 5. Blogs Configuration (`config/blogs.config.ts`)
-
-```typescript
-export const blogsConfig = {
-  title: { en: "Writing" },
-  items: [
-    {
-      id: "blog-slug",           // Used in URL: /blogs/blog-slug
-      title: { en: "Blog Title" },
-      meta: { en: "Your Name · Date · X min read" },
-      enabled: true,
-    },
-  ],
-};
-```
-
-### Adding Images
-
-Place all images in the `/public` folder:
-- Profile image: `/public/your-profile.png`
-- Company logos: `/public/company-logo.png`
-- Blog images: `/public/blogs/your-blog/image.png`
-
-## 📝 Blog Posts
-
-Blog posts are located in `/app/blogs/[blog-id]/page.tsx`. 
-
-To add a new blog:
-1. Create a new folder: `/app/blogs/your-blog-slug/`
-2. Add a `page.tsx` file (copy from existing blog as template)
-3. Add the blog to `config/blogs.config.ts`
-
-To remove a blog:
-- Set `enabled: false` in `config/blogs.config.ts`, or
-- Delete the folder from `/app/blogs/`
-
-## 🚀 Deployment to Vercel
-
-### Option 1: Deploy with Vercel CLI
-
-1. **Install Vercel CLI**
-   ```bash
-   npm install -g vercel
-   ```
-
-2. **Login to Vercel**
-   ```bash
-   vercel login
-   ```
-
-3. **Deploy**
-   ```bash
-   vercel
-   ```
-
-4. **Deploy to production**
-   ```bash
-   vercel --prod
-   ```
-
-### Option 2: Deploy via GitHub
-
-1. **Push your code to GitHub**
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit"
-   git remote add origin https://github.com/yourusername/your-repo.git
-   git push -u origin main
-   ```
-
-2. **Connect to Vercel**
-   - Go to [vercel.com](https://vercel.com)
-   - Click "New Project"
-   - Import your GitHub repository
-   - Click "Deploy"
-
-3. **Set up custom domain (optional)**
-   - Go to your project settings on Vercel
-   - Navigate to "Domains"
-   - Add your custom domain
-
-### Environment Variables (Optional)
-
-If you need environment variables, add them in Vercel:
-- Go to Project Settings → Environment Variables
-- Add your variables
-
-## 🛠️ Development
-
-### Available Scripts
-
-```bash
-npm run dev      # Start development server
-npm run build    # Build for production
-npm run start    # Start production server
-npm run lint     # Run ESLint
-npm run test     # Run tests
-```
-
-### Project Structure
-
-```
-├── app/                    # Next.js App Router pages
-│   ├── page.tsx           # Homepage
-│   ├── layout.tsx         # Root layout
-│   ├── globals.css        # Global styles
-│   └── blogs/             # Blog pages
-├── config/                 # ⭐ Configuration files (edit these!)
-│   ├── site.config.ts
-│   ├── profile.config.ts
-│   ├── experience.config.ts
-│   ├── projects.config.ts
-│   ├── blogs.config.ts
-│   └── index.ts
-├── contexts/              # React contexts
-│   └── LanguageContext.tsx
-├── public/                # Static assets
-└── tests/                 # Test files
-```
-
-### Tech Stack
-
-- **Framework**: Next.js 15 (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Fonts**: JetBrains Mono
-- **Deployment**: Vercel
-
-## 🌐 Features
-
-- ✅ **Responsive Design** - Works on all devices
-- ✅ **Dark Theme** - Modern dark aesthetic
-- ✅ **SEO Optimized** - Meta tags, Open Graph, Twitter cards
-- ✅ **Google Analytics** - Optional tracking
-- ✅ **Fast** - Optimized for performance
-- ✅ **Accessible** - Semantic HTML, ARIA labels
-
-## 📄 License
-
-This project is open source and available for personal use.
+### Data Scientist | AI Engineer | Full-Stack Builder | Software Engineer
+[![Portfolio](https://img.shields.io/badge/Portfolio-samsaxena.me-blue?style=for-the-badge&logo=google-chrome&logoColor=white)](https://www.samsaxena.me)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Samarth_Saxena-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/samarth-saxena-/)
 
 ---
 
-**Need help?** Open an issue on GitHub or reach out!
+## 📖 About Me
+I don't just train models; I build the infrastructure, the pipelines, and the user-facing products that make them useful. I operate with a **"ship-it" attitude**, bridging the gap between a model in a Jupyter notebook and one thriving in the chaos of production.
+
+*  **Education:** Master of Science in Applied Data Science from **USC** (GPA: 3.9/4.0) and B.Tech in Computer Science from **Manipal University Jaipur** (CGPA: 9.17/10.0).
+*  **Currently:** Data Scientist at **Cloud9 Esports**, where I architected a Generative AI Content Ecosystem that automated 100% of short-form script drafting, viral clips extraction from long-form content and multilingual captioning in 33+ languages.
+*  **Philosophy:** Complexity is often just a lack of initiative. I pride myself on being the person who unblocks the team by building the solution from scratch.
+*  **Current Focus:** Build, build and oh, build.
+
+---
+
+## 📈 Annual Activity
+![Snake animation](https://github.com/Samarth1337/Samarth1337/blob/output/github-contribution-grid-snake.svg)
+
+## 🛠️ Tech Stack
+
+### 💻 Programming & Core Languages
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![SQL](https://img.shields.io/badge/SQL-003B57?style=for-the-badge&logo=postgresql&logoColor=white)
+![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![Scala](https://img.shields.io/badge/scala-%23DE3423.svg?style=for-the-badge&logo=scala&logoColor=white)
+![Bash](https://img.shields.io/badge/bash-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
+![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+### 🧠 AI, LLMs & Machine Learning
+![Gemini](https://img.shields.io/badge/Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white)
+![Claude](https://img.shields.io/badge/Claude-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
+![Llama2](https://img.shields.io/badge/Llama_2-0467DF?style=for-the-badge&logo=meta&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
+![RAG](https://img.shields.io/badge/RAG-Retrieval--Augmented--Generation-orange?style=for-the-badge)
+![Fine-Tuning](https://img.shields.io/badge/Fine--Tuning-Model--Optimization-blueviolet?style=for-the-badge)
+![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-FFD21E?style=for-the-badge)
+![Reinforcement Learning](https://img.shields.io/badge/Reinforcement--Learning-00A6ED?style=for-the-badge)
+![Computer Vision](https://img.shields.io/badge/Computer--Vision-CNN-green?style=for-the-badge)
+![BERT](https://img.shields.io/badge/BERT-NLP-FF6F00?style=for-the-badge)
+![XGBoost](https://img.shields.io/badge/XGBoost-black?style=for-the-badge)
+![n8n](https://img.shields.io/badge/n8n-FF6C37?style=for-the-badge&logo=n8n&logoColor=white)
+
+### 🏗️ Full-Stack, SWE & DevOps
+![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-D71F00?style=for-the-badge&logo=sqlalchemy&logoColor=white)
+![REST API](https://img.shields.io/badge/REST--API-0052CC?style=for-the-badge&logo=json-web-tokens&logoColor=white)
+![AsyncIO](https://img.shields.io/badge/AsyncIO-Multithreading-blue?style=for-the-badge)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/CI/CD-GitHub%20Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+![Unit Testing](https://img.shields.io/badge/Unit%20%26%20Integration-Testing-brightgreen?style=for-the-badge)
+
+### ☁️ Cloud, Data & Infrastructure
+![GCP](https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)
+![Airflow](https://img.shields.io/badge/Airflow-017CEE?style=for-the-badge&logo=apache-airflow&logoColor=white)
+![Spark](https://img.shields.io/badge/Apache_Spark-E25A1C?style=for-the-badge&logo=apache-spark&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![DBeaver](https://img.shields.io/badge/DBeaver-382923?style=for-the-badge&logo=dbeaver&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+
+### 📚 Libraries & Specialized Tools
+![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)
+![Keras](https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white)
+![FFmpeg](https://img.shields.io/badge/FFmpeg-007808?style=for-the-badge&logo=ffmpeg&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+![ElevenLabs](https://img.shields.io/badge/ElevenLabs-Voice_AI-black?style=for-the-badge)
+
+---
+
+## 🌟 Featured Projects
+
+### [Nuclear and Aviation Safety using NLP](https://github.com/Samarth1337/nuclear-aviation-safety-research)
+**Award: Best Project & Best Data Science Developer (CKIDS DataFest '23 USC)**
+Automated the outlining of safety trait violations in Nuclear Plant reports using a GuidedLDA model that learns from domain-specific "seed words".
+
+### [RAG Docu-'Mentor' ChatAI](https://github.com/Samarth1337/Advanced-Chatbot-with-Langchain-and-Llama2-Deployed-)
+A TA bot designed to replace a course assistant, capable of processing uploaded PDFs and generating conversational responses using **FAISS**, **Llama 2**, and **HuggingFace** embeddings.
+
+### [Session-Based RecSys with Continual Learning](https://github.com/Samarth1337/RecSys_Continual_Learning)
+Solved for **Concept Drift** and **Catastrophic Forgetting** in a 1M+ interaction dataset. Outperformed LSTM models by 7% using sliding windows and replay buffers.
+
+### [Yelp Recommendation System](https://github.com/Samarth1337/Recommendation_System_on_Yelp_Data)
+Implemented **Locality Sensitive Hashing (LSH)** and collaborative filtering on the Yelp dataset to achieve a high prediction accuracy (RMSE: 0.978).
+
+### [Neural Network from Scratch](https://github.com/Samarth1337/NN_from_Scratch)
+Built a layer-by-layer neural network using only **NumPy**, implementing backpropagation and optimization without high-level ML libraries.
+
+---
+
+## 📬 Let's Connect
+* **Email:** [samarth.saxena1337@gmail.com](mailto:samarth.saxena1337@gmail.com)
+* **LinkedIn:** [linkedin.com/in/samarth-saxena-/](https://www.linkedin.com/in/samarth-saxena-/)
+* **Portfolio:** [samsaxena.me](https://www.samsaxena.me)
+
+---

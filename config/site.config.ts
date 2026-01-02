@@ -9,7 +9,7 @@ export const siteConfig = {
   // Site metadata (used in <head> and SEO)
   metadata: {
     title: "Sam Saxena - Portfolio",
-    description: "and this is me in a nutshell",
+    description: "and this is me in a nutshell.",
     author: "Samarth Saxena",
     siteUrl: "https://samsaxena.me", // Your deployed URL
     locale: "en_US",

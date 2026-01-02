@@ -1,7 +1,7 @@
 # Hello! I'm Samarth Saxena 👋 
 
 ### Data Scientist | AI Engineer | Full-Stack Builder | Software Engineer
-[![Portfolio](https://img.shields.io/badge/Portfolio-samsaxena.me-blue?style=for-the-badge&logo=google-chrome&logoColor=white)](https://www.samsaxena.me)
+[![Portfolio](https://img.shields.io/badge/Portfolio-samsaxena.vercel.app-blue?style=for-the-badge&logo=google-chrome&logoColor=white)](https://www.samsaxena.vercel.app)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Samarth_Saxena-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/samarth-saxena-/)
 
 ---
@@ -103,6 +103,6 @@ Built a layer-by-layer neural network using only **NumPy**, implementing backpro
 ## 📬 Let's Connect
 * **Email:** [samarth.saxena1337@gmail.com](mailto:samarth.saxena1337@gmail.com)
 * **LinkedIn:** [linkedin.com/in/samarth-saxena-/](https://www.linkedin.com/in/samarth-saxena-/)
-* **Portfolio:** [samsaxena.me](https://www.samsaxena.me)
+* **Portfolio:** [samsaxena.me](https://www.samsaxena.vercel.app)
 
 ---

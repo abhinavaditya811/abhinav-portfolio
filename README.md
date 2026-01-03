@@ -1,23 +1,20 @@
-# Hello! I'm Samarth Saxena 👋 
+# Hello! I'm Abhinav Aditya
 
-### Data Scientist | AI Engineer | Full-Stack Builder | Software Engineer
+### Data Scientist | AI Engineer | Full-Stack Engineer | Software Engineer
 [![Portfolio](https://img.shields.io/badge/Portfolio-samsaxena.vercel.app-blue?style=for-the-badge&logo=google-chrome&logoColor=white)](https://samsaxena.vercel.app)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Samarth_Saxena-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/samarth-saxena-/)
 
 ---
 
 ## 📖 About Me
-I don't just train models; I build the infrastructure, the pipelines, and the user-facing products that make them useful. I operate with a **"ship-it" attitude**, bridging the gap between a model in a Jupyter notebook and one thriving in the chaos of production.
+I work with models everyday.
 
-*  **Education:** Master of Science in Applied Data Science from **USC** (GPA: 3.9/4.0) and B.Tech in Computer Science from **Manipal University Jaipur** (CGPA: 9.17/10.0).
-*  **Currently:** Data Scientist at **Cloud9 Esports**, where I architected a Generative AI Content Ecosystem that automated 100% of short-form script drafting, viral clips extraction from long-form content and multilingual captioning in 33+ languages.
-*  **Philosophy:** Complexity is often just a lack of initiative. I pride myself on being the person who unblocks the team by building the solution from scratch.
-*  **Current Focus:** Build, build and oh, build.
+*  **Education:** Master of Science in Data Analytics Engineering from **NEU** (GPA: 3.947/4.0) and B.Tech in Computer and Communication Engineering from **Manipal University Jaipur** (CGPA: 9.17/10.0).
 
 ---
 
 ## 📈 Annual Activity
-![Snake animation](https://github.com/Samarth1337/Samarth1337/blob/output/github-contribution-grid-snake.svg)
+![Snake animation](https://github.com/abhinavaditya811/abhinavaditya811/blob/output/github-contribution-grid-snake.svg)
 
 ## 🛠️ Tech Stack
 
@@ -80,7 +77,7 @@ I don't just train models; I build the infrastructure, the pipelines, and the us
 
 ---
 
-## 🌟 Featured Projects
+<!-- ## 🌟 Featured Projects
 
 ### [Nuclear and Aviation Safety using NLP](https://github.com/Samarth1337/nuclear-aviation-safety-research)
 **Award: Best Project & Best Data Science Developer (CKIDS DataFest '23 USC)**
@@ -96,13 +93,13 @@ Solved for **Concept Drift** and **Catastrophic Forgetting** in a 1M+ interactio
 Implemented **Locality Sensitive Hashing (LSH)** and collaborative filtering on the Yelp dataset to achieve a high prediction accuracy (RMSE: 0.978).
 
 ### [Neural Network from Scratch](https://github.com/Samarth1337/NN_from_Scratch)
-Built a layer-by-layer neural network using only **NumPy**, implementing backpropagation and optimization without high-level ML libraries.
+Built a layer-by-layer neural network using only **NumPy**, implementing backpropagation and optimization without high-level ML libraries. -->
 
 ---
 
 ## 📬 Let's Connect
-* **Email:** [samarth.saxena1337@gmail.com](mailto:samarth.saxena1337@gmail.com)
-* **LinkedIn:** [linkedin.com/in/samarth-saxena-/](https://www.linkedin.com/in/samarth-saxena-/)
-* **Portfolio:** [samsaxena.me](https://samsaxena.vercel.app)
+* **Email:** [aditya.ab@northeastern.edu](mailto:aditya.ab@northeastern.edu)
+* **LinkedIn:** [linkedin.com/in/abhinavaditya811/](https://www.linkedin.com/in/abhinavaditya811/)
+<!-- * **Portfolio:** [samsaxena.me](https://samsaxena.vercel.app) -->
 
 ---

@@ -9,12 +9,12 @@ export const profileConfig = {
   // Your name configuration
   name: {
     // Full name
-    full: "Samarth Saxena",
+    full: "Abhinav Aditya",
     // Short/nickname (displayed in hero)
-    short: "Sam",
+    short: "Abhi",
     // Extra characters for the typing animation effect on hover
     // e.g., if short is "john" and extraChars is "athan", hovering shows "johnathan"
-    extraChars: "arth",
+    extraChars: "nav",
   },
 
   // Hero section greeting
@@ -24,10 +24,10 @@ export const profileConfig = {
 
   // Social links (leave empty string to hide)
   social: {
-    email: "samarth.saxena1337@gmail.com",
-    linkedin: "https://www.linkedin.com/in/samarth-saxena-/",
-    github: "https://github.com/samarth1337",
-    twitter: "https://x.com/samarth1337",
+    email: "aditya.ab@northeastern.edu",
+    linkedin: "https://www.linkedin.com/in/abhinavaditya811/",
+    github: "https://github.com/abhinavaditya811",
+    twitter: "https://x.com/abhinaveeb",
     // Add more social links as needed
   },
 

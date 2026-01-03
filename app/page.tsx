@@ -331,7 +331,7 @@ export default function Home() {
               >
                 <div className="relative w-20 h-20 md:w-28 md:h-28 rounded-2xl overflow-hidden ring-2 ring-white/10 group-hover:ring-white/30 transition-all duration-500 group-hover:scale-105 shadow-2xl">
                   <img
-                    src="/favicon.ico"
+                    src="/headshot.png"
                     alt="Profile"
                     className="w-full h-full object-cover"
                   />

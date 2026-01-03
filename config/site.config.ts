@@ -8,12 +8,12 @@
 export const siteConfig = {
   // Site metadata (used in <head> and SEO)
   metadata: {
-    title: "Sam Saxena - Portfolio",
+    title: "Abhinav Aditya - Portfolio",
     description: "and this is me in a nutshell.",
-    author: "Samarth Saxena",
-    siteUrl: "https://samsaxena.me", // Your deployed URL
+    author: "Abhinav Aditya",
+    siteUrl: "https://abhinav-aditya.com", // Your deployed URL
     locale: "en_US",
-    twitterHandle: "@samarth1337", // Optional: for Twitter cards
+    twitterHandle: "@abhinaveeb", // Optional: for Twitter cards
   },
 
   // Google Analytics (optional - leave empty string to disable)

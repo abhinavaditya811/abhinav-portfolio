@@ -1,8 +1,7 @@
 # Hello! I'm Abhinav Aditya
 
 ### Data Scientist | AI Engineer | Full-Stack Engineer | Software Engineer
-[![Portfolio](https://img.shields.io/badge/Portfolio-samsaxena.vercel.app-blue?style=for-the-badge&logo=google-chrome&logoColor=white)](https://samsaxena.vercel.app)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Samarth_Saxena-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/samarth-saxena-/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Abhinav_Aditya-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abhinavaditya811/)
 
 ---
 

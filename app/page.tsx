@@ -229,7 +229,7 @@ const ProjectCard = ({ project, index }: { project: any; index: number }) => {
       
       {/* Tooltip Popup */}
       {project.description && showTooltip && (
-        <div className="absolute left-0 right-0 top-full mt-2 z-50 animate-fadeIn">
+        <div className="absolute left-0 right-0 top-full z-50 animate-fadeIn">
           <div className="p-3 rounded-xl bg-stone-900/95 dark:bg-stone-800/95 light:bg-white/95 backdrop-blur-md border border-white/10 dark:border-stone-700/50 light:border-stone-200 shadow-2xl">
             <p className="text-stone-300 dark:text-stone-300 light:text-stone-600 text-xs leading-relaxed">
               {project.description.en}

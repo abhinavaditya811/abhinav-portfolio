@@ -9,7 +9,7 @@ export const siteConfig = {
   // Site metadata (used in <head> and SEO)
   metadata: {
     title: "Abhinav Aditya - Portfolio",
-    description: "and this is me in a nutshell.",
+    description: "Welcome to my hub.",
     author: "Abhinav Aditya",
     siteUrl: "https://abhinav-aditya.com", // Your deployed URL
     locale: "en_US",

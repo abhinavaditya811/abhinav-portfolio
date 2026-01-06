@@ -52,7 +52,7 @@ export const experienceConfig = {
         },
         description: {
           en: [
-            "Led end-to-end development of a generative AI chatbot by fine-tuning OpenAI's gpt-3.5-turbo model on 500+ documents, reducingaverage response time from 5+ seconds to less than 3 seconds using caching.",
+            "Led end-to-end development of a generative AI chatbot by fine-tuning OpenAI's gpt-3.5-turbo model on 500+ documents, reducing average response time from 5+ seconds to less than 3 seconds using caching.",
             "Optimised RAG retrieval by benchmarking embedding dimensions, upgrading from 384 to 1024 after K=3 evaluation to improve semantic accuracy.",
             "Identified critical user drop-off points using Heap funnels, then developed a new homepage (NextJS) based on the findings, resulting in a 19% increase in sign-ups in 3 months.",
             "Architected a CI/CD pipeline using GitHub Actions with 3 parallel jobs and esbuild; implemented automated unit tests and reported 78.3% code coverage via Codecov, contributing to a 57% reduction in build time.",

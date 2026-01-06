@@ -187,19 +187,42 @@ export default function Home() {
             <h2 className="text-[11px] font-black uppercase tracking-[0.5em] text-indigo-500">Selected Work</h2>
             <div className="h-px flex-1 bg-gradient-to-r from-indigo-500/50 to-transparent" />
           </div>
+          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {displayedProjects.map((project, i) => (
-              <a key={i} href={project.url} target="_blank" rel="noopener noreferrer" className="group p-8 rounded-3xl bg-[#0A0A0C] border border-white/5 hover:border-indigo-500/30 transition-all duration-500">
-                <div className="flex justify-between mb-6">
-                  <div className="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 group-hover:bg-indigo-500 group-hover:text-white transition-all">
-                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+              <a 
+                key={i} 
+                href={project.url} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="group relative h-64 rounded-3xl bg-[#0A0A0C] border border-white/5 overflow-hidden transition-all duration-500"
+              >
+                {/* Static Content (Always Visible) */}
+                <div className="p-8 h-full flex flex-col">
+                  <div className="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 mb-6">
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    </svg>
+                  </div>
+                  <h3 className="text-white font-bold text-lg mb-2">{project.name.en}</h3>
+                  <p className="text-stone-500 text-sm line-clamp-2">{project.description?.en}</p>
+                </div>
+
+                {/* Glassmorphism Overlay (Visible on Hover) */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 p-8 flex flex-col justify-center bg-indigo-500/10 backdrop-blur-md border border-white/20 rounded-3xl">
+                  <div className="absolute inset-0 bg-black/40 -z-10" /> {/* Darkens background for readability */}
+                  <h3 className="text-white font-bold text-lg mb-3">About Project</h3>
+                  <p className="text-white text-sm leading-relaxed overflow-y-auto max-h-full pr-2">
+                    {project.description?.en}
+                  </p>
+                  <div className="mt-4 text-indigo-300 text-[10px] font-black uppercase tracking-widest">
+                    Click to View →
                   </div>
                 </div>
-                <h3 className="text-white font-bold text-lg mb-2 group-hover:text-indigo-400 transition-colors">{project.name.en}</h3>
-                <p className="text-stone-500 text-sm leading-relaxed line-clamp-2">{project.description?.en}</p>
               </a>
             ))}
           </div>
+
           {projectsConfig.items.length > 8 && (
             <div className="mt-12 text-center">
               <button 

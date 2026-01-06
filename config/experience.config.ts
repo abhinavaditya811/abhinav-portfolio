@@ -77,7 +77,7 @@ export const experienceConfig = {
       {
         name: "Northeastern University",
         role: {
-          en: "Master of Science in Data Analytics Engineering",
+          en: "MS in Data Analytics Engineering",
         },
         subtitle: {
           en: "Boston, Massachusetts",
@@ -97,7 +97,7 @@ export const experienceConfig = {
       {
         name: "Manipal University Jaipur",
         role: {
-          en: "Bachelor of Technology in Computer and Communication Engineering",
+          en: "BTech in Computer and Communication Engineering",
         },
         subtitle: {
           en: "India",

@@ -41,7 +41,7 @@ export const projectsConfig = {
       },
       url: "https://github.com/Cite-Connect",
       description: {
-        en: "A scalable, end-to-end recommendation system to help researchers discover relevant academic literature through semantic search and citation graph analysis",
+        en: "A scalable, end-to-end recommendation system to help researchers discover relevant academic literature through semantic search and citation graph analysis.",
       },
     },
     {
@@ -50,7 +50,7 @@ export const projectsConfig = {
       },
       url: "https://github.com/heisenberg1804/BIBOT-genBi-hackathon",
       description: {
-        en: "A multi-agent chatbot to automate business intelligence insights and visualisations from user-uploaded CSVs using LangChain",
+        en: "A multi-agent chatbot to automate business intelligence insights and visualisations from user-uploaded CSVs using LangChain.",
       },
     },
     {
@@ -59,7 +59,7 @@ export const projectsConfig = {
       },
       url: "https://github.com/heisenberg1804/Predicting-Insurance-Claim-Likelihood-and-Severity-based-on-Extreme-Weather-Events",
       description: {
-        en: "Built predictive models to assess flood claim approval likelihood by merging property data with storm indicators",
+        en: "Built predictive models to assess flood claim approval likelihood by merging property data with storm indicators.",
       },
     },
     {

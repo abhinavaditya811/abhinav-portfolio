@@ -9,17 +9,15 @@
 ## 📖 About Me
 I work with models everyday.
 
-From my first encounter with C++ in 11th grade to building AI-powered systems at scale, my journey has been driven by curiosity and a passion for solving real-world problems through technology.
+From my first C++ class in 11th grade to building AI systems at scale, I've been driven by solving real-world problems through technology.
 
-I'm currently pursuing my Master's in Data Analytics Engineering at **Northeastern University** (GPA: 3.92/4.0), where I've deepened my expertise in machine learning, generative AI, and MLOps. My academic foundation began with a B.Tech in Computer and Communication Engineering from **Manipal University Jaipur** (CGPA: 8.13/10.0).
+I'm pursuing my Master's in Data Analytics Engineering at **Northeastern University** (GPA: 3.92/4.0), building on my B.Tech from **Manipal University Jaipur**. As a Software Development Engineer at **Agentdesks** (Radius Agent subsidiary), I developed AI chatbots and RAG systems for 70,000+ real estate professionals, while architecting CI/CD pipelines that cut build times by 57%.
 
-As a Software Development Engineer at **Agentdesks** (subsidiary of San Francisco-based Radius Agent), I spent two years building solutions for a network of 70,000+ real estate professionals. I led the development of generative AI chatbots, implemented RAG systems for document retrieval, and architected CI/CD pipelines that reduced build times by 57%. This experience solidified my transition from full-stack development to specializing in AI and data science.
+Currently, I'm working on **CiteConnect**—an academic literature recommendation system combining semantic search with citation graph analysis. I'm building the complete MLOps pipeline on GCP to help researchers discover relevant papers more efficiently.
 
-Currently, I'm working on **CiteConnect**, an end-to-end academic literature recommendation system that combines semantic search with citation graph analysis. I'm architecting the entire MLOps pipeline on GCP, implementing hybrid search systems, and building RAG-based explanations to help researchers discover relevant papers more efficiently.
+Beyond tech, I bring leadership experience as a former sports captain and competitive athlete. Whether training for marathons or diving into the latest AI research, I approach every challenge with analytical thinking and determination.
 
-Beyond coding, I bring a unique perspective shaped by leadership experience as a sports captain and competitive athlete. Whether I'm training for marathons, competing in gaming tournaments, or exploring the latest anime series, I approach every challenge with the same analytical mindset and determination that drives my technical work.
-
-I **thrive** at the intersection of AI, data engineering, and product development—always looking for ways to transform complex problems into elegant, scalable solutions.
+I **thrive** at the intersection of AI, data engineering, and product development—transforming complex problems into scalable solutions.
 
 ---
 

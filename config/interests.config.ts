@@ -15,6 +15,14 @@ export const interestsConfig = {
       category: "Sports",
       link: "https://www.instagram.com/mujfootball/"
     },
+    {
+      category: "Music",
+      title: { en: "Lofi and house for deep work sessions." },
+      // description: { en: "Curating lofi and deep house for deep work sessions." },
+      playlistId: "37i9dQZF1E8Os0U30rQdBR", // Your Spotify Playlist ID
+      link: "https://open.spotify.com/playlist/1YolcgxPryjALXCWzyzjK9?si=f9e3f3e175064a68",
+      image: "/fred.jpg" // Fallback background
+    },
     // {
     //   title: { en: "Apex Legends" },
     //   description: { en: "Competitive player and streamer on Twitch." },

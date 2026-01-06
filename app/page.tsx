@@ -8,6 +8,7 @@ import {
   experienceConfig,
   projectsConfig,
   blogsConfig,
+  interestsConfig,
 } from '@/config';
 
 // Floating particles component for background effect - always active, slow-moving
@@ -95,7 +96,7 @@ const Navbar = () => {
 
   const navItems = [
     { id: 'work-experience', label: 'Work' },
-    { id: 'internships', label: 'Internships' },
+    // { id: 'internships', label: 'Internships' },
     { id: 'education', label: 'Education' },
     { id: 'projects', label: 'Projects' },
   ];
@@ -237,6 +238,43 @@ const ProjectCard = ({ project, index }: { project: any; index: number }) => {
           </div>
         </div>
       )}
+    </div>
+  );
+};
+
+const InterestCard = ({ item }: { item: any }) => {
+  return (
+    <div
+      className="group relative rounded-2xl overflow-hidden aspect-[4/3] md:aspect-[16/10] bg-stone-900 border border-white/10 shadow-2xl cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:border-white/20"
+      onClick={() => window.open(item.link, '_blank')}
+    >
+      {/* Background Image */}
+      <img
+        src={item.image}
+        alt={item.title.en}
+        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-60 group-hover:opacity-80"
+      />
+      
+      {/* Overlay Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
+
+      {/* Content */}
+      <div className="absolute inset-0 p-5 flex flex-col justify-end">
+        <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+          <span className="text-[10px] font-bold uppercase tracking-widest text-stone-400 mb-1 block">
+            {item.category}
+          </span>
+          <h3 className="text-white font-bold text-lg mb-2">
+            {item.title.en}
+          </h3>
+          <p className="text-stone-300 text-xs leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 line-clamp-3">
+            {item.description.en}
+          </p>
+        </div>
+      </div>
+      
+      {/* Subtle border shine on hover */}
+      <div className="absolute inset-0 border-2 border-white/0 group-hover:border-white/10 rounded-2xl transition-colors duration-300" />
     </div>
   );
 };
@@ -403,6 +441,19 @@ export default function Home() {
                   </svg>
                 </a>
               )}
+              {profileConfig.social.twitch && (
+                <a
+                  href={profileConfig.social.twitch}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center w-11 h-11 rounded-xl bg-white/5 dark:bg-stone-800/50 light:bg-stone-100 text-stone-400 dark:text-stone-400 light:text-stone-600 hover:bg-white/10 dark:hover:bg-stone-700/50 light:hover:bg-stone-200 hover:text-white dark:hover:text-white light:hover:text-stone-900 transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-white/10 dark:border-stone-700/30 light:border-stone-200"
+                  aria-label="Twitch"
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M11.571 4.714h1.715v5.143H11.57V4.714zm4.715 0H18v5.143h-1.714V4.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0H6zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714v9.429z" />
+                  </svg>
+                </a>
+              )}
             </div>
           </header>
 
@@ -431,7 +482,7 @@ export default function Home() {
             </section>
 
             {/* Internships Section */}
-            {experienceConfig.internships && experienceConfig.internships.items.length > 0 && (
+            {/* {experienceConfig.internships && experienceConfig.internships.items.length > 0 && (
               <section id="internships" className={`transition-all duration-700 delay-200 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} scroll-mt-20`}>
                 <div className="mb-6 group">
                   <h2 className="text-xs font-bold uppercase tracking-widest text-stone-500 dark:text-stone-500 light:text-stone-400 inline-block">
@@ -451,7 +502,7 @@ export default function Home() {
                   ))}
                 </div>
               </section>
-            )}
+            )} */}
 
             {/* Education Section */}
             {experienceConfig.education && experienceConfig.education.items.length > 0 && (
@@ -547,10 +598,26 @@ export default function Home() {
               </section>
             )}
 
+            {/* Co-curricular Section */}
+            <section id="interests" className={`transition-all duration-700 delay-[450ms] ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} scroll-mt-20`}>
+              <div className="mb-6 group">
+                <h2 className="text-xs font-bold uppercase tracking-widest text-stone-500 dark:text-stone-500 light:text-stone-400 inline-block">
+                  {interestsConfig.title.en}
+                </h2>
+                <div className="h-px w-12 bg-stone-700 dark:bg-stone-700 light:bg-stone-300 mt-2 transition-all duration-500 group-hover:w-24"></div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {interestsConfig.items.map((item, index) => (
+                  <InterestCard key={index} item={item} />
+                ))}
+              </div>
+            </section>
+
             {/* Footer */}
             <footer className="pt-8 pb-12 text-center">
               <p className="text-stone-600 dark:text-stone-600 light:text-stone-400 text-xs">
-                Built with &lt;3 by Sam. Just like me, this page is ever-evolving :)
+                Built with &lt;3 by Abhinav. Just like me, this page is ever-evolving :)
               </p>
             </footer>
           </div>

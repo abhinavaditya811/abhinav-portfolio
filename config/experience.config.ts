@@ -52,11 +52,12 @@ export const experienceConfig = {
         },
         description: {
           en: [
-            "Architected an end-to-end <b>Generative AI Content Ecosystem</b> (Scripts, Clips, Captions) using <b>Gemini, Claude, GPT, ElevenLabs</b> and <b>DeepL</b> & Human-in-the-Loop <b>RAG pipeline</b> (Async FFmpeg, PostgreSQL, BM25, LangChain, yt-dlp) to automate <b>100%</b> of short-form script drafting, multilingual captioning in <b>33+ languages</b>, and viral highlights extraction, reducing manual curation time by <b>90%</b>, increasing content output by <b>300%</b> and saving <b>100+ labor hours</b> and an estimated annualized <b>$240k</b> for the company",
-            "Deployed a <b>'PMT Agent'</b>, an autonomous <b>n8n workflow</b> orchestrating Slack, Google Drive, and Gemini APIs to auto-capture, QA, and organize social media deliverables, eliminating manual reporting bottlenecks and ensuring <b>100% data accuracy</b> for legal compliance",
-            "Developed a <b>League of Legends draft prediction engine</b> using an ensemble of <b>Random Forests</b> and <b>Sequential models</b>, utilizing <b>Reinforcement Learning</b> for qualitative state evaluation and <b>Riot API</b> data to simulate probability-based draft scenarios",
-            "Created an <b>Automated Viewership Dashboard</b> via a robust <b>ETL pipeline</b> aggregating metrics across <b>7 social media platforms</b>; implemented <b>Cron-based daily scheduling</b> with file locking and exponential backoff, facilitating key strategic decisions, directly aiding Sales, Content, and Partnerships teams, generating an estimated <b>$50k+</b> in annual labor savings",
-            "Built a <b>semantic search engine</b> for <b>80TB</b> of unstructured media on Google Drive using <b>Gemini API</b> for automated asset tagging, reducing retrieval time from <b>~20 minutes to less than 10 seconds</b> via descriptive metadata indexing"
+            "Led end-to-end development of a generative AI chatbot by fine-tuning OpenAI's gpt-3.5-turbo model on 500+ documents, reducingaverage response time from 5+ seconds to less than 3 seconds using caching.",
+            "Optimised RAG retrieval by benchmarking embedding dimensions, upgrading from 384 to 1024 after K=3 evaluation to improve semantic accuracy.",
+            "Identified critical user drop-off points using Heap funnels, then developed a new homepage (NextJS) based on the findings, resulting in a 19% increase in sign-ups in 3 months.",
+            "Architected a CI/CD pipeline using GitHub Actions with 3 parallel jobs and esbuild; implemented automated unit tests and reported 78.3% code coverage via Codecov, contributing to a 57% reduction in build time.",
+            "Led full-stack revamp of CRM tool serving 1,000+ agents, migrating from VanillaJS to ReactJS with Redux, integrating 10+ RESTful APIs, and improving lead conversion rate by 17%.",
+            "Collaborated with a 12-person cross-platform team to develop 'Radius Rooms', a WebRTC solution using the Agora SDK; supported 100 concurrent users per room by implementing host, speaker, listener, and screen sharing features, resulting in 500+ monthly active users and a 6% MoM increase in user engagement."
           ].join(" || "),
         },
         url: "https://radiusagent.com",
@@ -107,7 +108,7 @@ export const experienceConfig = {
         description: {
           en: [
             "<b>CGPA: 8.13/10.0</b>",
-            "<b>Co-Curricular & Leadership:</b> Head of Events (Founding Member) for <b>Glitch! Esports Society of MUJ</b> & Organizer for <b>ACM MUJ</b>"
+            "<b>Co-Curricular & Leadership:</b> Captain of university soccer team, co-mentor for JAVA at ACM MUJ."
           ].join(" || "),
         },
         url: "https://jaipur.manipal.edu/",

@@ -28,6 +28,15 @@ export const projectsConfig = {
   items: [
     {
       name: {
+        en: "LiM: Less is More (Ongoing)",
+      },
+      url: "",
+      description: {
+        en: "An intelligent orchestration layer that cuts 90% of LLM costs by routing tasks to the correct, hyper-efficient small model paradigm.",
+      },
+    },
+    {
+      name: {
         en: "CiteConnect: Semantic Academic Search Engine",
       },
       url: "https://github.com/Cite-Connect",
@@ -51,6 +60,60 @@ export const projectsConfig = {
       url: "https://github.com/heisenberg1804/Predicting-Insurance-Claim-Likelihood-and-Severity-based-on-Extreme-Weather-Events",
       description: {
         en: "Built predictive models to assess flood claim approval likelihood by merging property data with storm indicators",
+      },
+    },
+    {
+      name: {
+        en: "EEG Classification Model",
+      },
+      url: "https://colab.research.google.com/drive/1tKZjO6JjgSJJrvmFIyhCFMqlHjLrIJO2?usp=sharing",
+      description: {
+        en: "Classified EEG signals into seizure vs non-seizure categories using a Convolutional Neural Network (CNN) architecture.",
+      },
+    },
+    {
+      name: {
+        en: "Customer Segmentation using RFM analysis and K-means",
+      },
+      url: "https://github.com/abhinavaditya811/Customer-Segmentation",
+      description: {
+        en: "Built a customer segmentation model using RFM (Recency, Frequency, Monetary) analysis and K-means clustering to identify distinct customer groups for targeted marketing strategies, resulting in improved customer engagement and retention.",
+      },
+    },
+    {
+      name: {
+        en: "Log Ingestion and Analysis Pipeline for Customer Support",
+      },
+      url: "https://github.com/abhinavaditya811/stressTestLog",
+      description: {
+        en: "Built a minimal log ingestion and analysis pipeline using Cloud Run, and Pub/Sub to process and analyze customer support logs in real-time.",
+      },
+    },
+    {
+      name: {
+        en: "Sentiment Analysis using NLTK on Amazon reviews",
+      },
+      url: "https://github.com/abhinavaditya811/abhinavaditya811.github.io",
+      description: {
+        en: "Implemented a sentiment analysis model using the Natural Language Toolkit (NLTK) to classify Amazon product reviews as positive, negative, or neutral.",
+      },
+    },
+    {
+      name: {
+        en: "Blockchain Basics",
+      },
+      url: "https://github.com/abhinavaditya811/Working-of-Blockchain",
+      description: {
+        en: "Basic applications of blockchain including how hashes work, encryption, decryption using SHA256, and how a merkle tree is constructed to ensure data integrity and security in a blockchain network.",
+      },
+    },
+    {
+      name: {
+        en: "Fight the Mind",
+      },
+      url: "https://github.com/abhinavaditya811/ftm-django",
+      description: {
+        en: "A one-stop mental health platform built using Django that provides users with resources, self-help tools, and a supportive community to promote mental well-being and resilience.",
       },
     }
   ] as ProjectItem[],

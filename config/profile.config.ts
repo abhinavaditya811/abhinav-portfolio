@@ -28,6 +28,7 @@ export const profileConfig = {
     linkedin: "https://www.linkedin.com/in/abhinavaditya811/",
     github: "https://github.com/abhinavaditya811",
     twitter: "https://x.com/abhinaveeb",
+    twitch: "https://www.twitch.tv/iggsomba",
     // Add more social links as needed
   },
 

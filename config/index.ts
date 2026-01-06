@@ -19,3 +19,6 @@ export type { ProjectsConfig, ProjectItem } from './projects.config';
 
 export { blogsConfig } from './blogs.config';
 export type { BlogsConfig, BlogItem } from './blogs.config';
+
+export { interestsConfig } from './interests.config';
+// export type { InterestsConfig, InterestItem } from './interests.config';

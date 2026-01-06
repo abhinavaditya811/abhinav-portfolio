@@ -61,7 +61,7 @@ export const experienceConfig = {
           ].join(" || "),
         },
         url: "https://radiusagent.com",
-        logo: "/radiuslogo.png",
+        logo: "/radiuslogo.jpg",
       },
     ] as ExperienceItem[],
   },

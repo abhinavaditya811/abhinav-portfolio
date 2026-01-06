@@ -30,7 +30,7 @@ export const projectsConfig = {
       name: {
         en: "LiM: Less is More (Ongoing)",
       },
-      url: "",
+      url: "https://github.com/abhinavaditya811/LiM",
       description: {
         en: "An intelligent orchestration layer that cuts 90% of LLM costs by routing tasks to the correct, hyper-efficient small model paradigm.",
       },

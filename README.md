@@ -9,7 +9,17 @@
 ## 📖 About Me
 I work with models everyday.
 
-*  **Education:** Master of Science in Data Analytics Engineering from **NEU** (GPA: 3.947/4.0) and B.Tech in Computer and Communication Engineering from **Manipal University Jaipur** (CGPA: 8.13/10.0).
+From my first encounter with C++ in 11th grade to building AI-powered systems at scale, my journey has been driven by curiosity and a passion for solving real-world problems through technology.
+
+I'm currently pursuing my Master's in Data Analytics Engineering at **Northeastern University** (GPA: 3.92/4.0), where I've deepened my expertise in machine learning, generative AI, and MLOps. My academic foundation began with a B.Tech in Computer and Communication Engineering from **Manipal University Jaipur** (CGPA: 8.13/10.0).
+
+As a Software Development Engineer at **Agentdesks** (subsidiary of San Francisco-based Radius Agent), I spent two years building solutions for a network of 70,000+ real estate professionals. I led the development of generative AI chatbots, implemented RAG systems for document retrieval, and architected CI/CD pipelines that reduced build times by 57%. This experience solidified my transition from full-stack development to specializing in AI and data science.
+
+Currently, I'm working on **CiteConnect**, an end-to-end academic literature recommendation system that combines semantic search with citation graph analysis. I'm architecting the entire MLOps pipeline on GCP, implementing hybrid search systems, and building RAG-based explanations to help researchers discover relevant papers more efficiently.
+
+Beyond coding, I bring a unique perspective shaped by leadership experience as a sports captain and competitive athlete. Whether I'm training for marathons, competing in gaming tournaments, or exploring the latest anime series, I approach every challenge with the same analytical mindset and determination that drives my technical work.
+
+I **thrive** at the intersection of AI, data engineering, and product development—always looking for ways to transform complex problems into elegant, scalable solutions.
 
 ---
 

@@ -99,6 +99,7 @@ const Navbar = () => {
     // { id: 'internships', label: 'Internships' },
     { id: 'education', label: 'Education' },
     { id: 'projects', label: 'Projects' },
+    { id: 'contact', label: 'Contact' },
   ];
 
   return (
@@ -276,6 +277,37 @@ const InterestCard = ({ item }: { item: any }) => {
       {/* Subtle border shine on hover */}
       <div className="absolute inset-0 border-2 border-white/0 group-hover:border-white/10 rounded-2xl transition-colors duration-300" />
     </div>
+  );
+};
+
+const ContactSection = () => {
+  return (
+    <section id="contact" className="py-12 scroll-mt-20">
+      <div className="mb-6 group">
+        <h2 className="text-xs font-bold uppercase tracking-widest text-stone-500 dark:text-stone-500 light:text-stone-400 inline-block">
+          Get In Touch
+        </h2>
+        <div className="h-px w-12 bg-stone-700 dark:bg-stone-700 light:bg-stone-300 mt-2 transition-all duration-500 group-hover:w-24"></div>
+      </div>
+      
+      <div className="rounded-2xl bg-gradient-to-br from-white/5 to-transparent dark:from-stone-800/20 light:from-stone-100 p-8 border border-white/10 dark:border-stone-700/30 light:border-stone-200 text-center">
+        <h3 className="text-xl font-semibold text-white dark:text-white light:text-stone-900 mb-2">
+          Let's build something together
+        </h3>
+        <p className="text-stone-400 dark:text-stone-400 light:text-stone-600 text-sm mb-6 max-w-sm mx-auto">
+          I'm currently open to new opportunities and collaborations. My inbox is always open.
+        </p>
+        <a
+          href={`mailto:${profileConfig.social.email}`}
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-stone-950 font-medium hover:bg-stone-200 transition-colors duration-300 shadow-lg shadow-white/5"
+        >
+          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          Say Hello
+        </a>
+      </div>
+    </section>
   );
 };
 
@@ -613,6 +645,8 @@ export default function Home() {
                 ))}
               </div>
             </section>
+
+            <ContactSection />
 
             {/* Footer */}
             <footer className="pt-8 pb-12 text-center">

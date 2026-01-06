@@ -23,6 +23,15 @@ export const interestsConfig = {
       link: "https://open.spotify.com/playlist/1YolcgxPryjALXCWzyzjK9?si=f9e3f3e175064a68",
       image: "/fred.jpg" // Fallback background
     },
+    {
+      category: "Code",
+      title: { en: "Hackathons" },
+      description: { en: "Actively participating in hackathons and coding competitions. Came 1st in the Data Mining hackathon which had 30+ teams." },
+      link: "https://www.linkedin.com/posts/activity-7318096691297955841-JNkH?utm_source=share&utm_medium=member_desktop&rcm=ACoAACsTD68Bzcdu-lctCqMNNOqevv_sFimVULQ",
+      image: "/hack.jpg"
+    },
+    
+    
     // {
     //   title: { en: "Apex Legends" },
     //   description: { en: "Competitive player and streamer on Twitch." },

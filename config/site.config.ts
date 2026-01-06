@@ -11,9 +11,9 @@ export const siteConfig = {
     title: "Abhinav Aditya - Portfolio",
     description: "Welcome to my hub.",
     author: "Abhinav Aditya",
-    siteUrl: "https://abhinav-aditya.com", // Your deployed URL
+    siteUrl: "https://1abhinavaditya.com",
     locale: "en_US",
-    twitterHandle: "@abhinaveeb", // Optional: for Twitter cards
+    twitterHandle: "@abhinaveeb",
   },
 
   // Google Analytics (optional - leave empty string to disable)

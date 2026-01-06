@@ -56,8 +56,8 @@ export const experienceConfig = {
             "Optimised RAG retrieval by benchmarking embedding dimensions, upgrading from 384 to 1024 after K=3 evaluation to improve semantic accuracy.",
             "Identified critical user drop-off points using Heap funnels, then developed a new homepage (NextJS) based on the findings, resulting in a 19% increase in sign-ups in 3 months.",
             "Architected a CI/CD pipeline using GitHub Actions with 3 parallel jobs and esbuild; implemented automated unit tests and reported 78.3% code coverage via Codecov, contributing to a 57% reduction in build time.",
-            "Led full-stack revamp of CRM tool serving 1,000+ agents, migrating from VanillaJS to ReactJS with Redux, integrating 10+ RESTful APIs, and improving lead conversion rate by 17%.",
-            "Collaborated with a 12-person cross-platform team to develop 'Radius Rooms', a WebRTC solution using the Agora SDK; supported 100 concurrent users per room by implementing host, speaker, listener, and screen sharing features, resulting in 500+ monthly active users and a 6% MoM increase in user engagement."
+            "Led full-stack revamp of CRM tool, migrating from VanillaJS to ReactJS with Redux, integrating 10+ RESTful APIs.",
+            "Collaborated with a 12-person cross-platform team to develop 'Radius Rooms', a WebRTC solution using the Agora SDK; implemented host, speaker, listener, and screen sharing features."
           ].join(" || "),
         },
         url: "https://radiusagent.com",

@@ -42,7 +42,7 @@ export const experienceConfig = {
       {
         name: "Radius",
         role: {
-          en: "Software Developer Engineer",
+          en: "Software Development Engineer",
         },
         subtitle: {
           en: "San Francisco, California",

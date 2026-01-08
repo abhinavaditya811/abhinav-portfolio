@@ -426,11 +426,10 @@ export default function Home() {
                         <h3 className={`${theme === 'dark' ? 'text-white' : 'text-slate-900'} font-bold text-xl md:text-2xl`}>{interest.title.en}</h3>
                         <iframe
                           data-testid="embed-iframe"
-                          style={{borderRadius: '12px'}}
-                          src={`https://open.spotify.com/embed/playlist/${interest.playlistId}`}
+                          style={{ borderRadius: "12px" }}
+                          src="https://open.spotify.com/embed/playlist/1YolcgxPryjALXCWzyzjK9?utm_source=generator"
                           width="100%"
-                          height="352"
-                          allowFullScreen
+                          height="352" allowFullScreen
                           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                           loading="lazy">
                         </iframe>

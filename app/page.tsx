@@ -11,7 +11,7 @@ import {
   interestsConfig,
 } from '@/config';
 
-// --- Components ---
+// --- Helper Components ---
 
 const ScrollProgress = () => {
   const [width, setWidth] = useState(0);
@@ -38,7 +38,7 @@ const ThemeToggle = () => {
     >
       {theme === 'dark' ? (
         <svg className="w-5 h-5 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
         </svg>
       ) : (
         <svg className="w-5 h-5 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -55,7 +55,6 @@ const SocialIcon = ({ platform, className }: { platform: string; className?: str
     linkedin: <svg className={className} fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>,
     twitter: <svg className={className} fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>,
     email: <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>,
-    twitch: <svg className={className} fill="currentColor" viewBox="0 0 24 24"><path d="M11.571 4.714h1.715v5.143H11.57V4.714zm4.715 0H18v5.143h-1.714V4.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0H6zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714v9.429z" /></svg>,
     spotify: <svg className={className} fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.378 0 0 5.378 0 12s5.378 12 12 12 12-5.378 12-12S18.622 0 12 0zm5.503 17.31c-.223.359-.691.474-1.05.251-2.912-1.782-6.576-2.181-10.892-1.192-.408.093-.817-.158-.91-.566-.093-.408.158-.817.566-.91 4.725-1.079 8.76-.618 12.035 1.385.359.222.474.69.251 1.042zm1.441-3.258c-.281.458-.881.606-1.339.325-3.328-2.046-8.4-2.645-12.335-1.45-.515.158-1.053-.133-1.21-.648-.157-.514.133-1.052.648-1.21 4.498-1.365 10.09-.705 13.911 1.643.458.281.606.881.325 1.34zm.126-3.41c-4.01-2.378-10.611-2.6-14.437-1.438-.614.186-1.258-.168-1.444-.782-.186-.614.168-1.259.782-1.445 4.39-1.332 11.666-1.077 16.291 1.668.552.327.734 1.036.407 1.588-.327.552-1.036.734-1.588.408z"/></svg>
   };
   return icons[platform.toLowerCase()] || <svg className={className} fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 12l10 10 10-10L12 2z"/></svg>;
@@ -65,7 +64,7 @@ const Navbar = () => {
   const scrollToSection = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   return (
     <nav className="fixed top-20 md:top-8 left-1/2 -translate-x-1/2 z-50 flex items-center p-1 rounded-2xl bg-slate-100/80 dark:bg-black/80 backdrop-blur-xl border border-slate-300 dark:border-white/10 shadow-2xl transition-all duration-500 max-w-[95vw] overflow-x-auto scrollbar-hide">
-      {['experience', 'education', 'projects', 'interests', 'contact'].map((id) => (
+      {['experience', 'education', 'projects', 'testimonials', 'interests', 'contact'].map((id) => (
         <button
           key={id}
           onClick={() => scrollToSection(id)}
@@ -111,16 +110,122 @@ const ItemCard = ({ item }: any) => (
   </div>
 );
 
+// --- Testimonial Components ---
+
+const TestimonialCard = ({ testimonial }: { testimonial: any }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const isAnonymous = testimonial.consent.toLowerCase().includes('anonymously');
+  const name = isAnonymous ? 'Verified Professional' : testimonial.name;
+  const role = testimonial.title || testimonial.relationship;
+
+  const TEXT_LIMIT = 180;
+  const isLong = testimonial.text.length > TEXT_LIMIT;
+  const displayText = isExpanded || !isLong ? testimonial.text : `${testimonial.text.substring(0, TEXT_LIMIT)}...`;
+
+  return (
+    <div className="p-6 md:p-8 rounded-2xl md:rounded-3xl bg-slate-50 dark:bg-[#0A0A0C] border border-slate-200 dark:border-white/5 hover:border-indigo-500/30 transition-all duration-500 shadow-sm flex flex-col gap-4 h-full">
+      <div className="flex items-center gap-1 mb-2">
+        {[...Array(5)].map((_, i) => (
+          <svg key={i} className={`w-3.5 h-3.5 ${i < Math.floor(testimonial.rating / 2) ? 'text-yellow-500' : 'text-slate-300 dark:text-slate-700'}`} fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+          </svg>
+        ))}
+      </div>
+      <div className="flex-1">
+        <p className="text-slate-600 dark:text-stone-400 text-xs md:text-sm italic leading-relaxed">"{displayText}"</p>
+        {isLong && (
+          <button onClick={() => setIsExpanded(!isExpanded)} className="mt-2 text-[10px] font-bold text-indigo-500 hover:text-indigo-400 uppercase tracking-wider transition-colors">
+            {isExpanded ? 'Show Less' : 'Read More'}
+          </button>
+        )}
+      </div>
+      <div className="pt-4 border-t border-slate-200 dark:border-white/5 mt-4">
+        {testimonial.linkedin && !isAnonymous ? (
+          <a href={testimonial.linkedin} target="_blank" rel="noopener noreferrer" className="group/name inline-flex items-center gap-1.5 hover:text-indigo-500 transition-colors">
+            <h4 className="font-bold text-slate-900 dark:text-white text-sm group-hover/name:text-indigo-600 dark:group-hover/name:text-indigo-400">{name}</h4>
+            <svg className="w-3.5 h-3.5 text-[#0A66C2] opacity-80 group-hover/name:opacity-100 transition-opacity" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+        ) : (
+          <h4 className="font-bold text-slate-900 dark:text-white text-sm">{name}</h4>
+        )}
+        <p className="text-indigo-600 dark:text-indigo-400 text-[9px] font-semibold uppercase tracking-wider">{role}</p>
+      </div>
+    </div>
+  );
+};
+
+const QuickPraiseCard = ({ review }: { review: any }) => {
+  const isAnonymous = review.consent.toLowerCase().includes('anonymously');
+  const name = isAnonymous ? 'Verified Colleague' : review.name;
+  return (
+    <div className="flex items-center gap-4 px-5 py-3 rounded-full bg-slate-50 dark:bg-white/5 border border-slate-200 dark:border-white/10 whitespace-nowrap group hover:border-indigo-500/50 transition-all shadow-sm">
+      <div className="flex flex-col">
+        {review.linkedin && !isAnonymous ? (
+          <a href={review.linkedin} target="_blank" rel="noopener noreferrer" className="text-[10px] font-black text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors flex items-center gap-1">
+            {name}
+            <svg className="w-2.5 h-2.5 text-[#0A66C2]" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+        ) : (
+          <span className="text-[10px] font-black text-slate-900 dark:text-white">{name}</span>
+        )}
+        <span className="text-[8px] text-slate-400 dark:text-stone-500 font-bold uppercase tracking-tighter truncate max-w-[120px]">{review.title || review.relationship}</span>
+      </div>
+      <div className="h-6 w-px bg-slate-200 dark:bg-white/10" />
+      <div className="flex items-center gap-1.5 bg-indigo-500/10 px-2 py-0.5 rounded-lg">
+        <span className="text-[10px] font-black text-indigo-600 dark:text-indigo-400">{review.rating}/10</span>
+        <svg className="w-2.5 h-2.5 text-indigo-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+      </div>
+    </div>
+  );
+};
+
+// --- Main Home Component ---
+
 export default function Home() {
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [typedChars, setTypedChars] = useState(0);
   const [isHoveringName, setIsHoveringName] = useState(false);
   const [showAllProjects, setShowAllProjects] = useState(false);
+  const [testimonials, setTestimonials] = useState<any[]>([]);
+  const [quickReviews, setQuickReviews] = useState<any[]>([]);
 
   const displayedProjects = showAllProjects ? projectsConfig.items : projectsConfig.items.slice(0, 6);
 
   useEffect(() => { setMounted(true); }, []);
+
+  // Fetch and Process Testimonials from Stein API
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      try {
+        const res = await fetch('https://api.steinhq.com/v1/storages/695d0b39affba40a62363936/Form%20Responses%201');
+        const data = await res.json();
+        
+        const consentKey = 'Do you agree to have a quote from your feedback (anonymized or attributed to your job title/relationship) included in my professional portfolio?';
+        const descriptionKey = 'In your own words, describe a specific successful project or moment where you felt I made a significant difference.';
+        const ratingKey = 'How would you rate my overall contribution to our shared goals/projects?';
+
+        const allFeedback = data
+          .filter((row: any) => row[consentKey] && row[consentKey].toLowerCase() !== 'no')
+          .map((row: any) => ({
+            name: row['First and Last Name'],
+            relationship: row['What is your professional relationship with me?'],
+            title: row['Current job title and company'],
+            linkedin: row['LinkedIn Profile'],
+            text: (row[descriptionKey] || '').trim(),
+            consent: row[consentKey],
+            rating: parseInt(row[ratingKey]) || 10
+          }));
+
+        // Split based on description presence
+        setTestimonials(allFeedback.filter(f => f.text.length > 20));
+        setQuickReviews(allFeedback.filter(f => f.text.length <= 20));
+      } catch (error) {
+        console.error("Failed to fetch testimonials", error);
+      }
+    };
+    fetchTestimonials();
+  }, []);
 
   useEffect(() => {
     let interval: any;
@@ -141,7 +246,7 @@ export default function Home() {
       <Navbar />
 
       <main className="max-w-4xl mx-auto px-5 md:px-12 relative z-10">
-        {/* HERO */}
+        {/* HERO SECTION */}
         <header className="pt-32 pb-16 md:pt-56 md:pb-32">
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-10 text-center md:text-left">
             <div 
@@ -270,6 +375,37 @@ export default function Home() {
           )}
         </section>
 
+        {/* TESTIMONIALS SECTION */}
+        {(testimonials.length > 0 || quickReviews.length > 0) && (
+          <section id="testimonials" className="py-12 md:py-20">
+            <div className="flex items-center gap-4 md:gap-6 mb-10 md:mb-12">
+              <h2 className="text-[10px] md:text-[11px] font-black uppercase tracking-[0.3em] md:tracking-[0.5em] text-indigo-500 whitespace-nowrap">Testimonials</h2>
+              <div className={`h-px flex-1 bg-gradient-to-r ${theme === 'dark' ? 'from-indigo-500/50' : 'from-indigo-500/30'} to-transparent`} />
+            </div>
+
+            {/* Featured Testimonials */}
+            {testimonials.length > 0 && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-12">
+                {testimonials.map((testimonial, i) => (
+                  <TestimonialCard key={i} testimonial={testimonial} />
+                ))}
+              </div>
+            )}
+
+            {/* Quick Praise Highlights */}
+            {quickReviews.length > 0 && (
+              <div className="space-y-6">
+                <h3 className="text-[9px] font-bold uppercase tracking-widest text-slate-400 dark:text-stone-500">Quick Praise</h3>
+                <div className="flex flex-wrap gap-3">
+                  {quickReviews.map((review, i) => (
+                    <QuickPraiseCard key={i} review={review} />
+                  ))}
+                </div>
+              </div>
+            )}
+          </section>
+        )}
+
         {/* INTERESTS SECTION */}
         <section id="interests" className="py-12 md:py-20">
           <div className="flex items-center gap-4 md:gap-6 mb-10 md:mb-12">
@@ -277,7 +413,7 @@ export default function Home() {
             <div className={`h-px flex-1 bg-gradient-to-r ${theme === 'dark' ? 'from-indigo-500/50' : 'from-indigo-500/30'} to-transparent`} />
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-            {interestsConfig.items.map((interest, i) => (
+            {interestsConfig.items.map((interest: any, i: number) => (
               <div 
                 key={i} 
                 className="group relative h-[280px] md:h-[320px] rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden bg-slate-50 dark:bg-[#0A0A0C] border border-slate-300 dark:border-white/5 shadow-md transition-all duration-500"
@@ -291,7 +427,7 @@ export default function Home() {
                         <iframe
                           data-testid="embed-iframe"
                           style={{borderRadius: '12px'}}
-                          src="https://open.spotify.com/embed/playlist/1YolcgxPryjALXCWzyzjK9?utm_source=generator"
+                          src={`https://open.spotify.com/embed/playlist/${interest.playlistId}`}
                           width="100%"
                           height="352"
                           allowFullScreen
@@ -342,7 +478,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* FOOTER */}
+        {/* FOOTER SECTION */}
         <footer className="py-12 md:py-20 border-t border-slate-300 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 md:gap-10">
           <div className="text-center md:text-left">
             <p className="text-[9px] md:text-[10px] font-bold uppercase tracking-[0.3em] text-slate-500 mb-2">© 2026 {profileConfig.name.short}</p>

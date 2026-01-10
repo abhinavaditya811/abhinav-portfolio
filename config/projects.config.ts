@@ -100,6 +100,15 @@ export const projectsConfig = {
     },
     {
       name: {
+        en: "LeetCode Solutions",
+      },
+      url: "https://github.com/abhinavaditya811/leetCode",
+      description: {
+        en: "A collection of solutions to various coding problems from LeetCode, implemented in Python, covering a wide range of topics including data structures, and algorithms.",
+      },
+    },
+    {
+      name: {
         en: "Blockchain Basics",
       },
       url: "https://github.com/abhinavaditya811/Working-of-Blockchain",

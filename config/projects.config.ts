@@ -75,7 +75,7 @@ export const projectsConfig = {
       name: {
         en: "Customer Segmentation using RFM analysis and K-means",
       },
-      url: "https://github.com/abhinavaditya811/Customer-Segmentation",
+      url: "https://github.com/abhinavaditya811/Customer-Segmentation/tree/abhinav/detailed-improvements",
       description: {
         en: "Built a customer segmentation model using RFM (Recency, Frequency, Monetary) analysis and K-means clustering to identify distinct customer groups for targeted marketing strategies, resulting in improved customer engagement and retention.",
       },

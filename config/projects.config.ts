@@ -109,6 +109,15 @@ export const projectsConfig = {
     },
     {
       name: {
+        en: "Pandas Practice",
+      },
+      url: "https://github.com/abhinavaditya811/pandas",
+      description: {
+        en: "A repository of practice exercises and solutions for the Pandas library in Python, covering data manipulation, analysis, and visualization techniques.",
+      },
+    },
+    {
+      name: {
         en: "Blockchain Basics",
       },
       url: "https://github.com/abhinavaditya811/Working-of-Blockchain",

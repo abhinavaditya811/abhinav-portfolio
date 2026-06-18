@@ -1,139 +1,57 @@
 /**
  * Projects Configuration
- * 
- * This file contains your projects to showcase.
- * Update these values to display your work.
+ *
+ * Hand-curated flagship projects. Breadth (and freshness) is carried by the
+ * live GitHub section - tag a repo with the `showcase` topic on GitHub to
+ * surface it there. Keep this list short and high-signal.
  */
 
 export interface ProjectItem {
-  // Project name/title
-  name: {
-    en: string;
-  };
-  // Project URL (GitHub, live demo, etc.)
+  name: string;
   url: string;
-  // Optional: brief description
-  description?: {
-    en: string;
-  };
+  description: string;
+  // Tech stack tags (rendered as chips)
+  tech?: string[];
+  // Optional flag for in-progress work
+  ongoing?: boolean;
+  // Optional accolade line (award, venue, etc.)
+  badge?: string;
 }
 
 export const projectsConfig = {
-  // Section title
-  title: {
-    en: "Projects",
-  },
-
-  // Your projects list
+  title: "Featured Projects",
   items: [
     {
-      name: {
-        en: "LiM: Less is More (Ongoing)",
-      },
-      url: "https://github.com/abhinavaditya811/LiM",
-      description: {
-        en: "An intelligent orchestration layer that cuts 90% of LLM costs by routing tasks to the correct, hyper-efficient small model paradigm.",
-      },
+      name: "Settl - Autonomous AI Invoice Recovery",
+      url: "https://github.com/abhinavaditya811/settl",
+      description:
+        "A multi-agent system that autonomously recovers unpaid invoices - a 5-stage pipeline on GCP Vertex AI Agent Builder with Gemini 3 Pro. Shipped the deterministic strategy agent and compliance gate (28 passing tests), with a source-agnostic ingestion layer and a full decision audit trail.",
+      tech: ["Vertex AI", "Gemini 3 Pro", "Multi-Agent", "GCP"],
+      ongoing: true,
     },
     {
-      name: {
-        en: "CiteConnect: Semantic Academic Search Engine",
-      },
+      name: "Workhuman HR Analytics Capstone",
+      url: "https://github.com/carnageitself/HR-Capstone",
+      description:
+        "A 4-stage LLM document-processing pipeline over 1,000+ unstructured records - Llama-3-8B for NER + behavioral extraction, HDBSCAN clustering, and a Claude-seeded taxonomy, with SLM/LLM routing for a ~10x cost cut.",
+      tech: ["Llama 3", "Claude", "HDBSCAN", "NER"],
+      badge: "Nominated - Ferretti & Yamamura Award",
+    },
+    {
+      name: "CiteConnect - Semantic Academic Search",
       url: "https://github.com/Cite-Connect",
-      description: {
-        en: "A scalable, end-to-end recommendation system to help researchers discover relevant academic literature through semantic search and citation graph analysis.",
-      },
+      description:
+        "Production MLOps pipeline (GitHub Actions, Docker, Airflow) deploying MiniLM-L6-v2 + SPECTER2 to GCP Cloud Run / Kubernetes with drift-triggered retraining, plus a RAG layer over Pinecone indexing 100K+ docs with hybrid semantic + citation-graph search.",
+      tech: ["MLOps", "Pinecone", "RAG", "Kubernetes"],
+      badge: "Presented at Google Expo, Cambridge",
     },
     {
-      name: {
-        en: "BOTBOT: Business Optimisation Transformer BOT",
-      },
+      name: "BIBOT - Business Intelligence Bot",
       url: "https://github.com/heisenberg1804/BIBOT-genBi-hackathon",
-      description: {
-        en: "A multi-agent chatbot to automate business intelligence insights and visualisations from user-uploaded CSVs using LangChain.",
-      },
+      description:
+        "A LangChain multi-agent chatbot, built in a hackathon sprint, that turns user-uploaded CSVs into business-intelligence insights and visualisations.",
+      tech: ["LangChain", "Multi-Agent", "Python"],
     },
-    {
-      name: {
-        en: "Insurance Claim Prediction",
-      },
-      url: "https://github.com/heisenberg1804/Predicting-Insurance-Claim-Likelihood-and-Severity-based-on-Extreme-Weather-Events",
-      description: {
-        en: "Built predictive models to assess flood claim approval likelihood by merging property data with storm indicators.",
-      },
-    },
-    {
-      name: {
-        en: "EEG Classification Model",
-      },
-      url: "https://colab.research.google.com/drive/1tKZjO6JjgSJJrvmFIyhCFMqlHjLrIJO2?usp=sharing",
-      description: {
-        en: "Classified EEG signals into seizure vs non-seizure categories using a Convolutional Neural Network (CNN) architecture.",
-      },
-    },
-    {
-      name: {
-        en: "Customer Segmentation using RFM analysis and K-means",
-      },
-      url: "https://github.com/abhinavaditya811/Customer-Segmentation/tree/abhinav/detailed-improvements",
-      description: {
-        en: "Built a customer segmentation model using RFM (Recency, Frequency, Monetary) analysis and K-means clustering to identify distinct customer groups for targeted marketing strategies, resulting in improved customer engagement and retention.",
-      },
-    },
-    {
-      name: {
-        en: "Log Ingestion and Analysis Pipeline for Customer Support",
-      },
-      url: "https://github.com/abhinavaditya811/stressTestLog",
-      description: {
-        en: "Built a minimal log ingestion and analysis pipeline using Cloud Run, and Pub/Sub to process and analyze customer support logs in real-time.",
-      },
-    },
-    {
-      name: {
-        en: "Sentiment Analysis using NLTK on Amazon reviews",
-      },
-      url: "https://github.com/abhinavaditya811/abhinavaditya811.github.io",
-      description: {
-        en: "Implemented a sentiment analysis model using the Natural Language Toolkit (NLTK) to classify Amazon product reviews as positive, negative, or neutral.",
-      },
-    },
-    {
-      name: {
-        en: "LeetCode Solutions",
-      },
-      url: "https://github.com/abhinavaditya811/leetCode",
-      description: {
-        en: "A collection of solutions to various coding problems from LeetCode, implemented in Python, covering a wide range of topics including data structures, and algorithms.",
-      },
-    },
-    {
-      name: {
-        en: "Pandas Practice",
-      },
-      url: "https://github.com/abhinavaditya811/pandas",
-      description: {
-        en: "A repository of practice exercises and solutions for the Pandas library in Python, covering data manipulation, analysis, and visualization techniques.",
-      },
-    },
-    {
-      name: {
-        en: "Blockchain Basics",
-      },
-      url: "https://github.com/abhinavaditya811/Working-of-Blockchain",
-      description: {
-        en: "Basic applications of blockchain including how hashes work, encryption, decryption using SHA256, and how a merkle tree is constructed to ensure data integrity and security in a blockchain network.",
-      },
-    },
-    {
-      name: {
-        en: "Fight the Mind",
-      },
-      url: "https://github.com/abhinavaditya811/ftm-django",
-      description: {
-        en: "A one-stop mental health platform built using Django that provides users with resources, self-help tools, and a supportive community to promote mental well-being and resilience.",
-      },
-    }
   ] as ProjectItem[],
 };
 

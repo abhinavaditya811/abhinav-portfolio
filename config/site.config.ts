@@ -8,8 +8,9 @@
 export const siteConfig = {
   // Site metadata (used in <head> and SEO)
   metadata: {
-    title: "Abhinav Aditya - Portfolio",
-    description: "Welcome to my hub.",
+    title: "Abhinav Aditya - Data & AI Engineer",
+    description:
+      "Data & AI Engineer building AI systems at scale - LLM pipelines, MLOps, and full-stack ML.",
     author: "Abhinav Aditya",
     siteUrl: "https://1abhinavaditya.com",
     locale: "en_US",

@@ -1,64 +1,54 @@
 import type { Config } from 'tailwindcss';
 import plugin from 'tailwindcss/plugin';
 
+const withAlpha = (token: string) => `rgb(var(${token}) / <alpha-value>)`;
+
 const config: Config = {
   darkMode: ['class'],
-  content: ['./app/**/*.{js,ts,jsx,tsx,mdx}', './contexts/**/*.{ts,tsx}'],
+  content: ['./app/**/*.{js,ts,jsx,tsx,mdx}', './components/**/*.{ts,tsx}', './contexts/**/*.{ts,tsx}'],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-jetbrains-mono)'],
-        mono: ['var(--font-jetbrains-mono)'],
-        minecraft: ['var(--font-minecraft)'],
-        'instrument-serif': ['var(--font-instrument-serif)'],
+        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-mono)', 'monospace'],
       },
       colors: {
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
-        primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))',
+        bg: withAlpha('--bg'),
+        surface: {
+          DEFAULT: withAlpha('--surface'),
+          2: withAlpha('--surface-2'),
         },
-        secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))',
-        },
-        destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))',
-        },
-        muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))',
+        border: withAlpha('--border'),
+        text: {
+          DEFAULT: withAlpha('--text'),
+          muted: withAlpha('--text-muted'),
+          faint: withAlpha('--text-faint'),
         },
         accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))',
-        },
-        popover: {
-          DEFAULT: 'hsl(var(--popover))',
-          foreground: 'hsl(var(--popover-foreground))',
-        },
-        card: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))',
+          DEFAULT: withAlpha('--accent'),
+          strong: withAlpha('--accent-strong'),
+          muted: withAlpha('--accent-muted'),
         },
       },
-      borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
+      borderColor: {
+        DEFAULT: withAlpha('--border'),
+      },
+      keyframes: {
+        'fade-up': {
+          '0%': { opacity: '0', transform: 'translateY(12px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+      },
+      animation: {
+        'fade-up': 'fade-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) both',
       },
     },
   },
   plugins: [
-    // Custom plugin to add 'light:' variant
-    plugin(function({ addVariant }) {
+    plugin(function ({ addVariant }) {
       addVariant('light', '.light &');
     }),
   ],
 };
+
 export default config;

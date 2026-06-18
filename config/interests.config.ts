@@ -1,48 +1,55 @@
+/**
+ * Interests Configuration
+ *
+ * The human side. One entry may use a Spotify playlist embed instead of an
+ * image by providing `spotifyEmbed`.
+ */
+
+export interface InterestItem {
+  category: string;
+  title: string;
+  description?: string;
+  image?: string;
+  link?: string;
+  // Spotify playlist embed URL (overrides image card)
+  spotifyEmbed?: string;
+}
+
 export const interestsConfig = {
-  title: { en: "Interests & Co-curriculars" },
+  title: "Beyond the Terminal",
   items: [
     {
-      title: { en: "Weeb" },
-      description: { en: "Avid anime watcher and discovering new manga regularly." },
-      image: "/gg.jpg",
       category: "Media",
-      link: "https://anilist.co/user/somba/animelist"
+      title: "Anime & Manga",
+      description: "Avid anime watcher, always hunting for the next great manga.",
+      image: "/gg.jpg",
+      link: "https://anilist.co/user/somba/animelist",
     },
     {
-      title: { en: "Soccer" },
-      description: { en: "Captain of my school and university's soccer team and a die hard Real Madrid fan." },
-      image: "/win.jpg",
       category: "Sports",
-      link: "https://www.instagram.com/mujfootball/"
+      title: "Soccer",
+      description:
+        "Captained my school and university teams. Die-hard Real Madrid fan.",
+      image: "/win.jpg",
+      link: "https://www.instagram.com/mujfootball/",
     },
     {
       category: "Music",
-      title: { en: "Lofi and house for deep work sessions." },
-      // description: { en: "Curating lofi and deep house for deep work sessions." },
-      playlistId: "37i9dQZF1E8Os0U30rQdBR", // Your Spotify Playlist ID
-      link: "https://open.spotify.com/playlist/1YolcgxPryjALXCWzyzjK9?si=f9e3f3e175064a68",
-      image: "/fred.jpg" // Fallback background
+      title: "Lofi & House for deep work",
+      spotifyEmbed:
+        "https://open.spotify.com/embed/playlist/1YolcgxPryjALXCWzyzjK9?utm_source=generator",
+      link: "https://open.spotify.com/playlist/1YolcgxPryjALXCWzyzjK9",
+      image: "/fred.jpg",
     },
     {
       category: "Code",
-      title: { en: "Hackathons" },
-      description: { en: "Actively participating in hackathons and coding competitions. Came 1st in the Data Mining hackathon which had 30+ teams." },
-      link: "https://www.linkedin.com/posts/activity-7318096691297955841-JNkH?utm_source=share&utm_medium=member_desktop&rcm=ACoAACsTD68Bzcdu-lctCqMNNOqevv_sFimVULQ",
-      image: "/hack.jpg"
+      title: "Hackathons",
+      description:
+        "Active hackathon competitor - placed 1st in a Data Mining hackathon of 30+ teams.",
+      image: "/hack.jpg",
+      link: "https://www.linkedin.com/posts/activity-7318096691297955841-JNkH",
     },
-    
-    
-    // {
-    //   title: { en: "Apex Legends" },
-    //   description: { en: "Competitive player and streamer on Twitch." },
-    //   image: "/win.jpg",
-    //   category: "Recreation"
-    // },
-    // {
-    //   title: { en: "Valorant" },
-    //   description: { en: "Competitive player and streamer on Twitch." },
-    //   image: "/win.jpg",
-    //   category: "Recreation"
-    // }
-  ]
+  ] as InterestItem[],
 };
+
+export type InterestsConfig = typeof interestsConfig;

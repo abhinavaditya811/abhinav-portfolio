@@ -11,32 +11,30 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
+// Read the theme the anti-FOUC script (in layout.tsx) already applied to <html>,
+// so the provider starts in sync and there is no flash.
+function getInitialTheme(): Theme {
+  if (typeof document !== 'undefined' && document.documentElement.classList.contains('light')) {
+    return 'light';
+  }
+  return 'dark';
+}
+
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setTheme] = useState<Theme>('dark');
+  const [theme, setTheme] = useState<Theme>(getInitialTheme);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-    // Check localStorage for saved theme
-    const savedTheme = localStorage.getItem('theme') as Theme;
-    if (savedTheme) {
-      setTheme(savedTheme);
-    } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-      setTheme('light');
-    }
   }, []);
 
   useEffect(() => {
     if (mounted) {
       localStorage.setItem('theme', theme);
-      // Update document class for CSS styling
-      if (theme === 'light') {
-        document.documentElement.classList.add('light');
-        document.documentElement.classList.remove('dark');
-      } else {
-        document.documentElement.classList.add('dark');
-        document.documentElement.classList.remove('light');
-      }
+      const root = document.documentElement;
+      root.classList.toggle('light', theme === 'light');
+      root.classList.toggle('dark', theme === 'dark');
+      root.style.colorScheme = theme;
     }
   }, [theme, mounted]);
 

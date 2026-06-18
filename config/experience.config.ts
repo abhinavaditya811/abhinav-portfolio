@@ -1,128 +1,130 @@
 /**
  * Experience Configuration
- * 
- * This file contains your education and work experience.
- * Update these values to showcase your background.
+ *
+ * Work experience, internships, and education. Each entry's `description` is a
+ * list of bullet points; HTML (e.g. <b>...</b>) is allowed inside a bullet.
  */
 
 export interface ExperienceItem {
-  // Company/Institution name
+  // Company / institution name
   name: string;
-  // Your role/position
-  role: {
-    en: string;
-  };
-  // Subtitle (location, degree, etc.)
-  subtitle: {
-    en: string;
-  };
-  // Timeline (date range)
-  timeline: {
-    en: string;
-  };
-  // Description (detailed summary)
-  description: {
-    en: string;
-  };
-  // URL to company/institution website
+  // Role / position / degree
+  role: string;
+  // Location, degree subtitle, etc.
+  subtitle: string;
+  // Date range
+  timeline: string;
+  // Bullet points
+  description: string[];
+  // Link to company / institution
   url: string;
-  // Logo image path (place in /public/ folder)
+  // Logo path (place in /public)
   logo: string;
 }
 
 export const experienceConfig = {
-  // Current section - what you're doing now (Work Experience)
-  current: {
-    // Section title
-    title: {
-      en: "Work Experience",
-    },
-    // Your current positions/activities
+  work: {
+    title: "Experience",
     items: [
       {
         name: "Radius",
-        role: {
-          en: "Software Development Engineer",
-        },
-        subtitle: {
-          en: "San Francisco, California",
-        },
-        timeline: {
-          en: "June 2022 – June 2024",
-        },
-        description: {
-          en: [
-            "Led end-to-end development of a generative AI chatbot by fine-tuning OpenAI's gpt-3.5-turbo model on 500+ documents, reducing average response time from 5+ seconds to less than 3 seconds using caching, optimising the bots response time using caching.",
-            "Optimised RAG retrieval by benchmarking embedding dimensions, upgrading from 384 to 1024 after K=3 evaluation to improve semantic accuracy.",
-            "Identified critical user drop-off points using Heap funnels, then developed a new homepage (NextJS) based on the findings, resulting in a 19% increase in sign-ups in 3 months.",
-            "Architected a CI/CD pipeline using GitHub Actions with 3 parallel jobs and esbuild; implemented automated unit tests and reported 78.3% code coverage via Codecov, contributing to a 57% reduction in build time.",
-            "Led full-stack revamp of CRM tool, migrating from VanillaJS to ReactJS with Redux, integrating 10+ RESTful APIs.",
-            "Collaborated with a 12-person cross-platform team to develop 'Radius Rooms', a WebRTC solution using the Agora SDK; implemented host, speaker, listener, and screen sharing features."
-          ].join(" || "),
-        },
+        role: "SDE - Applied AI & Data",
+        subtitle: "Bengaluru, India",
+        timeline: "Jun 2023 - Jun 2024",
+        description: [
+          "Shipped a production GenAI agent over the MLS listing API, letting agents query property details in natural language; caching cut response latency 40% (5s → 3s).",
+          "Built Metabase dashboards on MySQL to monitor housing-sales and subscription metrics, surfacing usage patterns that drove product experiments.",
+          "Ran A/B testing and funnel analysis across 1,000+ users, driving a 19% lift in sign-ups and a 17% increase in lead conversion.",
+          "Led a front-end revamp of the CRM in Next.js with Redux, integrating RESTful APIs and partnering with product stakeholders to define success KPIs ahead of each release.",
+        ],
+        url: "https://radiusagent.com",
+        logo: "/radiuslogo.jpg",
+      },
+      {
+        name: "Radius",
+        role: "SDE - DevOps & Infrastructure",
+        subtitle: "Bengaluru, India",
+        timeline: "Jun 2022 - Jun 2023",
+        description: [
+          "Established a CI/CD pipeline with GitHub Actions (78.3% test coverage), cutting build time by 57%.",
+          "Instrumented Prometheus telemetry across Docker services for real-time anomaly detection on Radius Rooms, a WebRTC platform scaled to 500+ MAUs.",
+        ],
         url: "https://radiusagent.com",
         logo: "/radiuslogo.jpg",
       },
     ] as ExperienceItem[],
   },
 
-  // Education section
-  education: {
-    // Section title
-    title: {
-      en: "Education",
-    },
-    // Your education history
+  // Internships - sourced from LinkedIn. Logos pending; empty `logo` renders a
+  // monogram placeholder. Bullets are minimal/factual - flesh out as needed.
+  internships: {
+    title: "Internships",
     items: [
       {
-        name: "Northeastern University",
-        role: {
-          en: "MS in Data Analytics Engineering",
-        },
-        subtitle: {
-          en: "Boston, Massachusetts",
-        },
-        timeline: {
-          en: "Graduating June 2026",
-        },
-        description: {
-          en: [
-            "<b>Current CGPA: 3.947/4.0</b>",
-            "<b>Relevant Coursework:</b> MLOps, Applied Generative AI, Data Mining, Data Management for Analytics, Databases, Machine Learning"
-          ].join(" || "),
-        },
-        url: "https://usc.edu/",
-        logo: "/neulogo.png",
+        name: "Thrillophilia",
+        role: "Software Development Engineer Intern",
+        subtitle: "Internship",
+        timeline: "Jan 2022 - May 2022",
+        description: [
+          "Built and shipped web features in JavaScript, collaborating through Git-based workflows.",
+        ],
+        url: "https://www.thrillophilia.com",
+        logo: "",
       },
       {
-        name: "Manipal University Jaipur",
-        role: {
-          en: "BTech in Computer and Communication Engineering",
-        },
-        subtitle: {
-          en: "India",
-        },
-        timeline: {
-          en: "Graduated Jul 2022",
-        },
-        description: {
-          en: [
-            "<b>CGPA: 8.13/10.0</b>",
-            "<b>Co-Curricular & Leadership:</b> Captain of university soccer team, co-mentor for JAVA at ACM MUJ."
-          ].join(" || "),
-        },
-        url: "https://jaipur.manipal.edu/",
-        logo: "/muj.png",
+        name: "turf Football",
+        role: "Senior Editor & Head of Product Development",
+        subtitle: "Delhi, India",
+        timeline: "May 2020 - Jan 2022",
+        description: [
+          "Led editorial and product for an Indian football platform covering news, transfers, and match analysis.",
+          "Drove product development as Head of Product Development (Nov 2020 - Dec 2021).",
+        ],
+        url: "",
+        logo: "",
+      },
+      {
+        name: "Altorum Leren",
+        role: "Software Engineer Intern",
+        subtitle: "Internship",
+        timeline: "Jun 2021 - Jul 2021",
+        description: [
+          "Contributed to engineering work using Git-based development workflows.",
+        ],
+        url: "https://www.altorumleren.com",
+        logo: "",
       },
     ] as ExperienceItem[],
   },
 
-  // Keep previous for backward compatibility (maps to internships)
-  previous: {
-    title: {
-      en: "Internships",
-    },
-    items: [] as ExperienceItem[],
+  education: {
+    title: "Education",
+    items: [
+      {
+        name: "Northeastern University",
+        role: "MS, Data Analytics Engineering",
+        subtitle: "Boston, Massachusetts",
+        timeline: "Aug 2024 - Apr 2026",
+        description: [
+          "<b>Current CGPA: 3.87 / 4.0</b>",
+          "<b>Relevant coursework:</b> MLOps, Applied Generative AI, Data Mining, Data Management for Analytics, Databases, Machine Learning.",
+        ],
+        url: "https://www.northeastern.edu/",
+        logo: "/neulogo.png",
+      },
+      {
+        name: "Manipal University Jaipur",
+        role: "BTech, Computer & Communication Engineering",
+        subtitle: "Jaipur, India",
+        timeline: "Jun 2018 - Jun 2022",
+        description: [
+          "<b>CGPA: 8.13 / 10.0</b>",
+          "<b>Leadership:</b> Captain of the university soccer team; co-mentor for Java at ACM MUJ.",
+        ],
+        url: "https://jaipur.manipal.edu/",
+        logo: "/muj.png",
+      },
+    ] as ExperienceItem[],
   },
 };
 

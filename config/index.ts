@@ -21,4 +21,7 @@ export { blogsConfig } from './blogs.config';
 export type { BlogsConfig, BlogItem } from './blogs.config';
 
 export { interestsConfig } from './interests.config';
-// export type { InterestsConfig, InterestItem } from './interests.config';
+export type { InterestsConfig, InterestItem } from './interests.config';
+
+export { skillsConfig } from './skills.config';
+export type { SkillsConfig, SkillGroup } from './skills.config';

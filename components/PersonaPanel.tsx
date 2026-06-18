@@ -15,7 +15,7 @@ const CONTENT: Record<
 > = {
   recruiter: {
     summary:
-      'Outcomes first. MS in Data Analytics Engineering at Northeastern (3.87 GPA), two years shipping AI & infrastructure at Radius - graduated Apr 2026 and open to full-time AI/ML & data roles.',
+      'Outcomes first. MS in Data Analytics Engineering at Northeastern, two years shipping AI & infrastructure at Radius - graduated Apr 2026 and open to full-time AI/ML & data roles.',
     highlights: [
       '19% sign-up lift',
       '57% faster builds',
